@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./dist/src/server.js",
-    "dev": "ts-node-dev ./src/server.ts",
+    "start-auth-api": "node ./dist/apps/Authentication/external/http/main/server.js",
+    "dev-auth-api": "ts-node-dev apps/Authentication/external/http/main/server.ts",
     "build": "tsc",
     "lint": "eslint --ignore-path .gitignore . --ext .ts",
     "lint:fix": "npm run lint -- --fix",
