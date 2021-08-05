@@ -1,4 +1,4 @@
-import { expect, jest, test } from "@jest/globals";
+import { expect } from "@jest/globals";
 import { Connection } from "typeorm";
 
 import { connection } from "../main";
