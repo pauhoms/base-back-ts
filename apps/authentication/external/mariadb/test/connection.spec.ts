@@ -1,8 +1,7 @@
+import { expect, jest, test } from "@jest/globals";
 import { Connection } from "typeorm";
 
 import { connection } from "../main";
-
-jest.useFakeTimers();
 
 describe("Mariadb connection", () => {
   it("connection should connected", () => {
