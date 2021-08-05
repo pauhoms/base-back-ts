@@ -1,0 +1,24 @@
+{
+   "type": "mariadb",
+   "host": "127.0.0.1",
+   "port": 1000,
+   "username": "root",
+   "password": "toor",
+   "database": "authdb",
+   "synchronize": true,
+   "logging": false,
+   "entities": [
+      "apps/authentication/external/mariadb/main/entity/**/*.entity.ts"
+   ],
+   "migrations": [
+      "apps/authentication/external/mariadb/main/migration/**/*.ts"
+   ],
+   "subscribers": [
+      "apps/authentication/external/mariadb/main/subscriber/**/*.ts"
+   ],
+   "cli": {
+      "entitiesDir": "apps/authentication/external/mariadb/main/entity",
+      "migrationsDir": "apps/authentication/external/mariadb/main/migration",
+      "subscribersDir": "apps/authentication/external/mariadb/main/subscriber"
+   }
+}

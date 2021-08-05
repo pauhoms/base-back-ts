@@ -1,4 +1,4 @@
-name: test
+  name: test
 
 on: push
 
@@ -21,8 +21,16 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
+     - name: Docker containers
+       run: |
+         make build
+         make run
+
       - name: Install Dependencies
         run: npm install
 
+      - name: Migrations
+        run: make migrate
+
       - name: Test
-        run: npm run test
+        run: make test

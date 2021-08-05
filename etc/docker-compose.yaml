@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  authdb:
+    build:
+      context: ./docker/mariadb
+    container_name: authdb
+    environment:
+      - MYSQL_DATABASE=authdb
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=toor
+    ports:
+      - "1000:3306"
