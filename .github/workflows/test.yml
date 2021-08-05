@@ -21,10 +21,10 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
-     - name: Docker containers
-       run: |
-         make build
-         make run
+      - name: Docker containers
+        run: |
+          make build
+          make run
 
       - name: Install Dependencies
         run: npm install
